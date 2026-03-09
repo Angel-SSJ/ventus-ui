@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig",
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": false,
+		"sourceMap": true
+	},
+	"exclude": ["example", "lib"]
+}

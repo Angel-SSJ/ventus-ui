@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"alwaysStrict": true,
+		"noImplicitAny": true,
+		"exactOptionalPropertyTypes": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"noImplicitReturns": true,
+		"noImplicitUseStrict": false,
+		"noStrictGenericChecks": false,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"target": "esnext",
+		"lib": ["esnext"],
+		"jsx": "react-native",
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"declaration": true,
+		"declarationDir": "./dist/typescript",
+		"declarationMap": false,
+		"sourceMap": false,
+		"noEmit": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"types": ["react-native", "node"],
+
+		"paths": {
+			"~/*": ["./packages/ui/src/*"],
+			"@/*": ["./examples/*"]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		"**/*.test.tsx",
+		"**/*.stories.tsx",
+		"bob.config.js",
+		"tailwind.config.js",
+		"theme-preset.js"
+	]
+}

@@ -1,0 +1,63 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.5/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"noDuplicateClasses": "on",
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedInterfaceMembers": "on",
+				"useSortedKeys": "on"
+			}
+		},
+		"enabled": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["**/*"]
+	},
+	"formatter": {
+		"attributePosition": "multiline",
+		"enabled": true,
+		"indentStyle": "tab",
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"attributePosition": "multiline",
+			"jsxQuoteStyle": "single",
+			"quoteStyle": "double",
+			"semicolons": "always"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"includes": ["**/*.test.js", "**/*.test.ts", "**/*.test.tsx"],
+		"rules": {
+			"correctness": {
+				"noChildrenProp": "error",
+				"noUnusedFunctionParameters": "error",
+				"noUnusedImports": "error"
+			},
+			"nursery": {
+				"noDuplicateEnumValues": "error"
+			},
+			"performance": {
+				"noBarrelFile": "error"
+			},
+			"recommended": true,
+			"style": {
+				"useExportType": "error"
+			},
+			"suspicious": {
+				"noConsole": "error","noDuplicateDependencies": "error"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
+}

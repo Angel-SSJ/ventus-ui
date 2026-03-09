@@ -1,0 +1,18 @@
+
+root = true
+
+[*]
+
+# SPACE INDENTATION
+indent_style = space
+indent_size = 2
+
+# LINE ENDINGS
+end_of_line = lf
+
+# CHARACTER SET
+charset = utf-8
+
+# WHITESPACE
+trim_trailing_whitespace = true
+insert_final_newline = true
