@@ -3,4 +3,8 @@ packages:
   - apps/*
   - examples/*
 
+ignoredBuiltDependencies:
+  - lefthook
+  - unrs-resolver
+
 nodeLinker: hoisted

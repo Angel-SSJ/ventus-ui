@@ -89,3 +89,4 @@ nitrogen/
 .env
 .env.*
 !.env.example
+__test__/

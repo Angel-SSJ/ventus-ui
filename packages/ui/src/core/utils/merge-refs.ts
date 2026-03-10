@@ -31,5 +31,7 @@ export function mergeRefs<T>(...refs: PossibleRef<T>[]): RefCallback<T> {
 				}
 			};
 		}
+
+		return undefined;
 	};
 }
