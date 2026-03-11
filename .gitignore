@@ -88,5 +88,13 @@ nitrogen/
 # Entornos Locales y Secretos
 .env
 .env.*
+env.*
 !.env.example
+*.log
+
+# Tests
 __test__/
+.storybook/
+
+# Text
+*.txt

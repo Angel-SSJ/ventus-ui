@@ -8,3 +8,6 @@ ignoredBuiltDependencies:
   - unrs-resolver
 
 nodeLinker: hoisted
+
+onlyBuiltDependencies:
+  - esbuild

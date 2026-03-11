@@ -42,6 +42,7 @@
 		"lint": "expo lint",
 		"reset-project": "node ./scripts/reset-project.js",
 		"start": "expo start",
+		"storybook-generate": "sb-rn-get-stories -c .storybook",
 		"web": "expo start --web"
 	},
 	"version": "1.0.0"
