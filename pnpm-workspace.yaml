@@ -1,13 +1,12 @@
 packages:
-  - packages/*
-  - apps/*
-  - examples/*
+- packages/*
+- apps/*
 
 ignoredBuiltDependencies:
-  - lefthook
-  - unrs-resolver
+- lefthook
+- unrs-resolver
 
 nodeLinker: hoisted
 
 onlyBuiltDependencies:
-  - esbuild
+- esbuild

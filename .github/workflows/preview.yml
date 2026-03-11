@@ -1,0 +1,50 @@
+name: Expo Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+concurrency:
+  group: ${{github.workflow}}-${{github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+          node-version: 24
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 9
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Setup EAS CLI
+      uses: expo/expo-github-action@v8
+      with:
+        eas-version: latest
+        token: ${{ secrets.EXPO_TOKEN_VENTUS_UI }}
+
+    - name: Create Preview (EAS Update)
+      id: preview
+      working-directory: apps/demo
+      run: eas update --auto --branch=pr-${{github.event.pull_request.number}}
+
+    - name: Comment QR on PR
+      uses: expo/expo-github-action/preview@v8
+      with:
+        command: eas update --auto --branch=pr-${{github.event.pull_request.number}}
