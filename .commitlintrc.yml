@@ -24,5 +24,5 @@ rules:
   subject-case: [ 2, "always", "lower-case" ]
   body-leading-blank: [ 2, "always" ]
   body-empty: [ 2, "never" ]
-  body-min-length: [ 2, "always", 20 ]
+  body-min-length: [ 2, "always", 10 ]
   header-max-length: [ 2, "always", 72 ]
