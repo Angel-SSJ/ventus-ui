@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: 24
 
+      - name: Install PNPM
+        run: npm i -g pnpm
+
       - name: Setup
         uses: ./.github/actions/setup
 
