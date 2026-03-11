@@ -123,7 +123,7 @@
 		"format": "pnpm exec biome format --write .",
 		"lint": "pnpm exec biome lint --write .",
 		"storybook:generate": "pnpm --filter apps run storybook-generate",
-		"test": "jest",
+		"test": "jest --passWithNoTests",
 		"test:ui": "pnpm --filter @ventus-ui/react-native test",
 		"typecheck": "tsc",
 		"version-packages": "changeset version"
